@@ -13,13 +13,13 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:src="@drawable/bread">
+            android:src="@drawable/hachiware">
 
         </ImageView>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="브레드"
+            android:text="하치와레"
             style="@style/MyTextCss"/>
 
     </LinearLayout>

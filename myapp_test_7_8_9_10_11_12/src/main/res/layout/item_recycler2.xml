@@ -13,7 +13,7 @@
         android:scaleType="fitStart"
         android:adjustViewBounds="true"
         android:layout_marginLeft="10dp"
-        android:src="@drawable/bread"></ImageView>
+        android:src="@drawable/damgom"></ImageView>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
             android:id="@+id/testText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="더미 데이터 라바"
+            android:text="더미 데이터 담곰"
             android:layout_marginBottom="5dp"
             style="@style/MyTextCss"></TextView>
 

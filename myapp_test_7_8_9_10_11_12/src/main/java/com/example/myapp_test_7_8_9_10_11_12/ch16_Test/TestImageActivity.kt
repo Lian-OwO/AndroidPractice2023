@@ -1,4 +1,4 @@
-package com.example.myapp_test6
+package com.example.myapp_test_7_8_9_10_11_12.ch16_Test
 
 import android.content.Intent
 import android.graphics.BitmapFactory
@@ -10,19 +10,19 @@ import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
-import com.example.myapp_test6.databinding.ActivityJoinBinding
+import com.example.myapp_test_7_8_9_10_11_12.R
+import com.example.myapp_test_7_8_9_10_11_12.databinding.ActivityTestImageBinding
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date
 
-class JoinActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityJoinBinding
+class TestImageActivity : AppCompatActivity() {
+    // 갤러리, 카메라 앱 연동해서 데이터 가져오기.
+    lateinit var binding: ActivityTestImageBinding
     lateinit var filePath : String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        binding = ActivityJoinBinding.inflate(layoutInflater)
+        binding = ActivityTestImageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         //작업 구성 2가지.
@@ -58,7 +58,7 @@ class JoinActivity : AppCompatActivity() {
                 // 3) reqHeight: Int
                 val calRatio = calculateInSampleSize(
                     it.data!!.data!!,
-                    // 가로 , 세로 : 150dp x 150dpd
+                    // 가로 , 세로 : 150dp x 150dp
                     resources.getDimensionPixelSize(R.dimen.profile_img_width),
                     resources.getDimensionPixelSize(R.dimen.profile_img_height),
                 )
@@ -158,11 +158,11 @@ class JoinActivity : AppCompatActivity() {
             Log.d("scb","file.absolutePath : $filePath")
 
             //콘텐츠 프로바이더를 이용해서, 데이터를 가져와야 함.
-            // provider에서 정한 authorities 값이 필요함.
-            // 매니페스트 파일에 가서,
             val photoURI : Uri = FileProvider.getUriForFile(
                 this,
-                "com.example.myapp_test6.fileprovider",
+                // provider에서 정한 authorities 값이 필요함.
+                // 매니페스트 파일에 가서,
+                "com.example.myapp_test_7_8_9_10_11_12.fileprovider",
                 file
             )
             // 카메라를 촬영하는 정해진 액션 문자열
@@ -234,6 +234,4 @@ class JoinActivity : AppCompatActivity() {
         return  inSampleSize
 
     }
-
-    }
-
+}

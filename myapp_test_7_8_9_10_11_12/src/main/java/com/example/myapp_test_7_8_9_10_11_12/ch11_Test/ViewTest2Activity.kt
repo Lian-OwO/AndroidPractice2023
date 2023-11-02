@@ -1,4 +1,4 @@
-package com.example.myapp_test_7_8_9_10_11_12.ch11_12_Test
+package com.example.myapp_test_7_8_9_10_11_12.ch11_Test
 
 import android.os.Build
 import android.os.Bundle
@@ -37,7 +37,8 @@ class ViewTest2Activity : AppCompatActivity() {
                 if (controller != null) {
                     controller.hide(
                         WindowInsets.Type.statusBars() or
-                                WindowInsets.Type.navigationBars())
+                                WindowInsets.Type.navigationBars()
+                    )
                     controller.systemBarsBehavior =
                         WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
                 }
